@@ -96,17 +96,6 @@ nav .btn{padding:11px 22px;font-size:10px}
   color:rgba(255,255,255,.82);font-weight:500;
 }
 .hero-cta{display:flex;gap:16px;justify-content:center;margin-top:44px;flex-wrap:wrap}
-.hero-meta{
-  position:absolute;bottom:0;left:0;right:0;z-index:2;
-  display:flex;justify-content:center;gap:0;
-  border-top:1px solid var(--line);
-  background:rgba(6,6,10,.55);
-}
-.hero-meta span{
-  padding:20px 34px;font-size:11px;font-weight:600;letter-spacing:.22em;
-  text-transform:uppercase;color:rgba(255,255,255,.65);
-}
-.hero-meta span + span{border-left:1px solid var(--line)}
 
 /* ---------- about ---------- */
 .about{background:var(--black);padding:clamp(90px,11vw,150px) 0}
@@ -119,17 +108,6 @@ nav .btn{padding:11px 22px;font-size:10px}
   font-size:clamp(24px,3.2vw,40px);line-height:1.3;letter-spacing:.01em;
 }
 .about-grid p{font-size:16.5px;line-height:1.8;color:rgba(255,255,255,.78);max-width:480px}
-.about-stats{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  border-top:1px solid var(--line);
-}
-.stat{padding:clamp(24px,3vw,40px) clamp(16px,2vw,30px) 0;border-left:1px solid var(--line)}
-.stat:first-child{border-left:none}
-.stat-n{
-  display:block;font-family:'Unbounded',sans-serif;font-weight:700;
-  font-size:clamp(30px,3.6vw,52px);color:var(--red);line-height:1;margin-bottom:14px;
-}
-.stat-l{font-size:12.5px;line-height:1.55;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 
 /* ---------- manifesto ---------- */
 .manifesto{background:var(--white);color:var(--ink);padding:clamp(110px,14vw,190px) 0;position:relative;overflow:hidden}
@@ -159,7 +137,7 @@ nav .btn{padding:11px 22px;font-size:10px}
 /* ---------- privileges ---------- */
 .priv{background:var(--white);color:var(--ink);padding:0 0 clamp(110px,13vw,170px)}
 .priv-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
+  display:grid;grid-template-columns:repeat(2,1fr);
   border-top:1px solid var(--line-dark);border-left:1px solid var(--line-dark);
 }
 .pcard{
@@ -256,43 +234,6 @@ nav .btn{padding:11px 22px;font-size:10px}
 }
 .res-body p{font-size:14.5px;line-height:1.65;color:#55555E}
 
-/* ---------- entry ---------- */
-.entry{background:var(--white);color:var(--ink);padding:clamp(110px,13vw,170px) 0}
-.entry-top{
-  display:grid;grid-template-columns:auto 1fr;gap:clamp(30px,6vw,90px);
-  align-items:center;margin-bottom:clamp(60px,9vw,110px);
-}
-.big10{
-  font-family:'Unbounded',sans-serif;font-weight:900;color:var(--red);
-  font-size:clamp(130px,24vw,320px);line-height:.85;letter-spacing:-.02em;
-}
-.entry-top h2{
-  font-family:'Unbounded',sans-serif;font-weight:500;
-  font-size:clamp(22px,3.2vw,38px);line-height:1.35;letter-spacing:.01em;max-width:560px;
-}
-.entry-top h2 span{color:var(--red)}
-.steps{
-  position:relative;display:grid;grid-template-columns:repeat(4,1fr);
-  gap:0 clamp(16px,2vw,28px);
-}
-.steps::before{
-  content:'';position:absolute;top:24px;left:11%;right:11%;height:2px;
-  background:linear-gradient(90deg,transparent,var(--red) 7%,var(--red) 93%,transparent);
-}
-.step{text-align:center;padding:0 clamp(8px,1.2vw,18px)}
-.step .num{
-  position:relative;width:50px;height:50px;border-radius:50%;
-  background:var(--red);color:#fff;
-  display:flex;align-items:center;justify-content:center;margin:0 auto 26px;
-  font-family:'Unbounded',sans-serif;font-weight:500;font-size:13px;
-  box-shadow:0 0 0 8px var(--white);
-}
-.step h4{
-  font-family:'Unbounded',sans-serif;font-weight:500;font-size:16px;
-  letter-spacing:.02em;line-height:1.45;margin-bottom:10px;
-}
-.step p{font-size:14px;line-height:1.6;color:#55555E}
-
 /* ---------- form ---------- */
 .apply{
   position:relative;padding:clamp(110px,13vw,180px) 0;
@@ -304,7 +245,6 @@ nav .btn{padding:11px 22px;font-size:10px}
 }
 .apply .wrap{position:relative;z-index:2;max-width:860px}
 .apply .shead{justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:18px}
-.apply .sub{color:rgba(255,255,255,.88);font-size:17px;line-height:1.7;max-width:520px;text-align:center;margin:0 auto}
 form{margin-top:clamp(40px,6vw,64px)}
 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
 .field{position:relative;margin-bottom:38px}
@@ -357,26 +297,16 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
 @media(max-width:960px){
   nav a{display:none}
   .priv-grid{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:1fr 1fr;gap:44px 24px}
-  .steps::before{display:none}
+  .res-grid{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
-  .about-stats{grid-template-columns:1fr 1fr}
-  .stat{padding-bottom:26px}
-  .stat:nth-child(3){border-left:none}
   .tl-line{left:9px;margin-left:0}
   .tle,.tle.right{width:auto;margin-left:34px}
   .tle.left::before,.tle.right::before{left:-31px;right:auto}
   .tle.left::after,.tle.right::after{left:-24px;right:auto;width:17px}
-  .res-grid{grid-template-columns:1fr}
-  .entry-top{grid-template-columns:1fr}
 }
 @media(max-width:620px){
   .priv-grid{grid-template-columns:1fr}
   .fgrid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
-  .hero-meta{flex-direction:column;align-items:center}
-  .hero-meta span{padding:12px}
-  .hero-meta span+span{border-left:none;border-top:1px solid var(--line)}
 }
 </style>
 </head>
@@ -388,8 +318,7 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
     <a href="#privileges">Привилегии</a>
     <a href="#events">События</a>
     <a href="#residences">Резиденции</a>
-    <a href="#entry">Условия входа</a>
-    <a href="#apply" class="btn">Подать заявку</a>
+    <a href="#apply" class="btn">Присоединиться</a>
   </nav>
 </header>
 
@@ -397,15 +326,9 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
 <section class="hero">
   <h1 class="rv rv-d1">ЛИГА</h1>
   <img class="logo-script rv rv-d1" src="assets/raketa-logo-red.png" alt="Ракета">
-  <p class="rv rv-d2">Сообщество тех, для кого «Ракета» — не часы,<br>а коллекция и характер.</p>
+  <p class="rv rv-d2">Закрытое объединение коллекционеров часов «Ракета»</p>
   <div class="hero-cta rv rv-d3">
-    <a href="#apply" class="btn">Подать заявку</a>
-    <a href="#privileges" class="btn btn-ghost">Что даёт Лига</a>
-  </div>
-  <div class="hero-meta">
-    <span>10+ часов в коллекции</span>
-    <span>Вход по приглашению</span>
-    <span>Петродворцовый часовой завод · 1721</span>
+    <a href="#apply" class="btn">Присоединиться</a>
   </div>
 </section>
 
@@ -413,14 +336,8 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
 <section class="about" id="about">
   <div class="wrap">
     <div class="about-grid">
-      <h2 class="rv">Клуб коллекционеров при старейшем заводе России</h2>
-      <p class="rv rv-d1">«Лига Ракеты» объединяет тех, для кого часы Петродворцового завода — часть личной истории. Лига открывает двери туда, куда не ведут магазины: в цеха, архивы и разговоры с людьми, которые делают механизмы руками.</p>
-    </div>
-    <div class="about-stats">
-      <div class="stat rv"><span class="stat-n">1721</span><span class="stat-l">год основания завода</span></div>
-      <div class="stat rv rv-d1"><span class="stat-n">8201</span><span class="stat-l">операция в производстве механизма</span></div>
-      <div class="stat rv rv-d2"><span class="stat-n">24</span><span class="stat-l">камня в механизме автоподзавода</span></div>
-      <div class="stat rv rv-d3"><span class="stat-n">10</span><span class="stat-l">часов «Ракета» — условие входа</span></div>
+      <h2 class="rv">Закрытое объединение коллекционеров часов «Ракета»</h2>
+      <p class="rv rv-d1">«Лига Ракеты» объединяет тех, для кого часы Петродворцового завода — часть личной истории. Лига открывает двери в долгую совместную экспедицию тем, для кого настоящее время измеряется не секундами, а пережитым опытом и стихиями, которые покорил.</p>
     </div>
   </div>
 </section>
@@ -429,7 +346,7 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
 <section class="manifesto">
   <div class="wrap rv">
     <span class="corner tl"></span>
-    <blockquote>Мы не собираемся в клубе — <em>мы отправляемся в&nbsp;путь.</em> Коллекционировать не вещи, а моменты, которые остаются в истории бренда навсегда.</blockquote>
+    <blockquote>Коллекционируем <em>моменты и&nbsp;впечатления,</em> которые проживаем вместе с&nbsp;историей бренда</blockquote>
     <span class="corner br"></span>
   </div>
 </section>
@@ -438,7 +355,7 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
 <section class="priv" id="privileges">
   <div class="wrap">
     <div class="shead rv">
-      <h2>Привилегии<br>Лиги</h2>
+      <h2>Привилегии</h2>
     </div>
     <div class="priv-grid">
       <div class="pcard rv">
@@ -447,23 +364,15 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
       </div>
       <div class="pcard rv rv-d1">
         <span class="num">02</span>
-        <div><h3>Совет клуба</h3><p>Первыми видите новые модели. Ваше мнение влияет на будущие релизы завода.</p></div>
-      </div>
-      <div class="pcard rv rv-d2">
-        <span class="num">03</span>
-        <div><h3>Клубные лимитные серии</h3><p>Участие в создании часов, которые существуют только для Лиги.</p></div>
-      </div>
-      <div class="pcard rv">
-        <span class="num">04</span>
-        <div><h3>Эксклюзивный мерч</h3><p>Предметы, которых нет и не будет в продаже.</p></div>
+        <div><h3>Эксклюзивные артефакты</h3><p>Предметы, которых нет и не будет в продаже.</p></div>
       </div>
       <div class="pcard rv rv-d1">
-        <span class="num">05</span>
+        <span class="num">03</span>
         <div><h3>След в истории</h3><p>Ваша история — в журнале, медиа и архиве бренда.</p></div>
       </div>
       <div class="pcard rv rv-d2">
-        <span class="num">06</span>
-        <div><h3>Персональный контакт</h3><p>Прямая линия с заводом через личного куратора Лиги.</p></div>
+        <span class="num">04</span>
+        <div><h3>Приоритетный сервис</h3><p>Общение с брендом через личного куратора Лиги.</p></div>
       </div>
     </div>
   </div>
@@ -484,10 +393,10 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
         <span class="tle-place">Завод · Петергоф</span>
       </article>
       <article class="tle right slide-r">
-        <span class="tle-date">Глубина</span>
-        <h3>Цех под ключ</h3>
-        <p>Участники на день становятся сотрудниками завода: сборка особой клубной партии часов, гравировка серийных номеров.</p>
-        <span class="tle-place">Завод · Петергоф</span>
+        <span class="tle-date">Эмоции</span>
+        <h3>Диалог с Владимиром Машковым</h3>
+        <p>Закрытая встреча в формате живого интервью — театр «Современник».</p>
+        <span class="tle-place">Москва · Современник</span>
       </article>
       <article class="tle left slide-l">
         <span class="tle-date">Широта</span>
@@ -516,7 +425,7 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
         </div>
       </article>
       <article class="resc rv rv-d1">
-        <div class="res-photo"><img src="assets/res-lounge.jpg" alt="Клубная гостиная"></div>
+        <div class="res-photo"><img src="assets/res-lounge.jpg" alt="Представительство «Ракета»"></div>
         <div class="res-body">
           <span class="res-city">Москва</span>
           <h3>Представительство «Ракета»</h3>
@@ -527,28 +436,11 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
   </div>
 </section>
 
-<!-- ENTRY -->
-<section class="entry" id="entry">
-  <div class="wrap">
-    <div class="entry-top">
-      <div class="big10 rv">10</div>
-      <h2 class="rv rv-d1">Десять часов «Ракета» в коллекции — <span>единственное условие</span> входа</h2>
-    </div>
-    <div class="steps">
-      <div class="step rv"><span class="num">01</span><h4>Заявка</h4><p>Короткая анкета — три минуты вашего времени.</p></div>
-      <div class="step rv rv-d1"><span class="num">02</span><h4>Разговор</h4><p>Личный звонок с куратором Лиги.</p></div>
-      <div class="step rv rv-d2"><span class="num">03</span><h4>Приглашение</h4><p>Каждую кандидатуру рассматриваем индивидуально.</p></div>
-      <div class="step rv rv-d3"><span class="num">04</span><h4>Welcome-пак</h4><p>Атрибут Лиги и доступ в закрытый канал клуба.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- APPLY -->
 <section class="apply" id="apply">
   <div class="wrap">
     <div class="shead rv">
-      <h2>Анкета</h2>
-      <p class="sub">Лига — это круг, а не список рассылки.<br>Каждую заявку читаем лично.</p>
+      <h2>Присоединиться к&nbsp;Лиге</h2>
     </div>
     <form id="form" class="rv">
       <div class="fgrid">
@@ -567,7 +459,7 @@ footer{background:#060608;border-top:1px solid var(--line);padding:56px 0}
         <div class="field"><label for="model">Любимая модель в коллекции</label><input id="model" type="text" placeholder="«Ракета» Коперник"></div>
         <div class="field full"><label for="social">Соцсети или сайт <span class="opt">— по желанию</span></label><input id="social" type="text" placeholder="t.me/..."></div>
       </div>
-      <button type="submit" class="btn">Отправить заявку</button>
+      <button type="submit" class="btn">Присоединиться</button>
       <p class="form-note">Отправляя анкету, вы соглашаетесь на обработку персональных данных. Ответим в течение семи дней.</p>
     </form>
     <div class="success" id="success">
